@@ -1,13 +1,21 @@
-const addToFrontOrBack = () => {
+const addToFrontOrBack = (arr, value, isFront) => {
+  if (isFront === true) {
+    arr.unshift(value)
+  } else {
+    arr.push(value)
+  }
 };
 
-const reverseString = () => {
+const reverseString = (str) => {
+  return str.split('').reverse().join('')
 };
 
-const newArrayFullOf = () => {
+const newArrayFullOf = (value, numOfValue) => {
+  return new Array(numOfValue).fill(value)
 };
 
-const insertIntoMiddle = () => {
+const insertIntoMiddle = (arr, value) => {
+  arr.splice(arr.length / 2, 0, value)
 };
 
 const deleteFromMiddle = () => {

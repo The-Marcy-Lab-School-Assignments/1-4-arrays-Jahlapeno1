@@ -11,23 +11,40 @@ const reverseString = (str) => {
 };
 
 const newArrayFullOf = (value, numOfValue) => {
-  return new Array(numOfValue).fill(value)
+  let newArray = new Array(numOfValue).fill(value)
+  return newArray
 };
 
 const insertIntoMiddle = (arr, value) => {
   arr.splice(arr.length / 2, 0, value)
 };
 
-const deleteFromMiddle = () => {
+const deleteFromMiddle = (arr) => {
+  arr.splice(arr.length / 2, 1)
 };
 
-const isRightIndex = () => {
+const isRightIndex = (arr, value, index) => {
+  if (arr[index] === value) {
+    return true
+  } else {
+    return false
+  }
 };
 
-const roundAllNumsDown = () => {
+const roundAllNumsDown = (arr) => {
+  const roundedArr = []
+  for (let num of arr) {
+    roundedArr.push(Math.floor(num))
+  }
+  return roundedArr
 };
 
-const getAllYCoordinates = () => {
+const getAllYCoordinates = (arrOfCoords) => {
+  const yCoords = []
+  for (let coord of arrOfCoords) {
+    yCoords.push(coord[1])
+  }
+  return yCoords
 };
 
 module.exports = {

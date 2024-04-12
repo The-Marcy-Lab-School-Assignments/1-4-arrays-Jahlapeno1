@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job! */
 const uppercaseAll = (...theWords) => {
   const uppercaseArr = []
   for (const word of theWords) {
